@@ -18,14 +18,15 @@
     .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0}
     .benefit{background:#faf7ff;border-radius:10px;padding:12px;font-size:14px}
     .cta-row{display:flex;gap:12px;margin-top:18px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:600;text-decoration:none;cursor:pointer}
+    .btn{display:inline-block;padding:16px 26px;border-radius:12px;font-weight:700;text-decoration:none;cursor:pointer;font-size:18px}
     .btn-primary{background:linear-gradient(90deg,var(--purple),#4e1f86);color:#fff;border:none}
     .btn-outline{background:transparent;border:2px solid var(--purple);color:var(--purple)}
     .small{font-size:13px;color:#777;margin-top:10px}
 
     /* Upsell box */
-    .upsell{margin-top:20px;padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff8eb,#fff);border:1px solid #ffe9c3}
-    .price{font-size:22px;font-weight:700;color:#d25b00}
+    .upsell{margin-top:20px;padding:20px;border-radius:14px;background:linear-gradient(180deg,#7d3fc2,#5a2392);border:1px solid #4a1b75;color:#fff;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .upsell .price{font-size:26px;font-weight:700;color:#ffeb3b}
+    .upsell img{max-width:180px;border-radius:12px}
 
     /* Modal */
     .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;padding:20px}
@@ -43,6 +44,7 @@
       .card{flex-direction:column}
       .right{width:100%}
       .benefits{grid-template-columns:1fr}
+      .upsell{flex-direction:column;text-align:center}
     }
   </style>
 </head>
@@ -51,20 +53,15 @@
     <div class="card">
       <div class="left">
         <h1>Muito obrigado pela compra e confiança!</h1>
-        <p class="lead">Sua receita do <span style="color:var(--accent)">Mounjax</span> chegará em até <strong>5 minutos</strong> no seu e‑mail ou WhatsApp. Parabéns por dar o primeiro passo — essa fórmula é a base. Antes de ir, mostramos uma opção pronta e ainda mais eficaz para quem quer resultados imediatos.</p>
+        <p class="lead">Sua receita do <span style="color:var(--accent)">Mounjax</span> chegará em até <strong>5 minutos</strong> no seu e-mail ou WhatsApp. Parabéns por dar o primeiro passo — essa fórmula é a base. Antes de ir, mostramos uma opção pronta e ainda mais eficaz para quem quer resultados imediatos.</p>
 
         <div class="benefits">
           <div class="benefit">✅ Receita completa e passo a passo</div>
           <div class="benefit">✅ Ingredientes naturais e explicados</div>
           <div class="benefit">✅ Sugestões de dosagem</div>
-          <div class="benefit">✅ Suporte por e‑mail por 7 dias</div>
+          <div class="benefit">✅ Suporte por e-mail por 7 dias</div>
         </div>
       </div>
-
-      <aside class="right">
-        <img class="hero" src="https://imgur.com/bxIehHU.jpg" alt="Frasco Mounjax"/>
-        <div style="margin-top:12px;font-size:14px;color:#4b4b4b">Mounjax — Suplemento em gotas</div>
-      </aside>
     </div>
 
     <section style="margin-top:20px">
@@ -91,25 +88,27 @@
         <img src="https://imgur.com/NshJFII.jpg" alt="Depoimento 5"/>
         <img src="https://imgur.com/kuvyufU.jpg" alt="Depoimento 6"/>
         <img src="https://imgur.com/mTYarzT.jpg" alt="Depoimento 7"/>
+        <img src="https://imgur.com/YmdHadS.jpg" alt="Depoimento 8"/>
       </div>
     </section>
 
     <section class="upsell">
-      <strong>Oferta especial — Versão Pronta para Uso</strong>
-      <p class="small">Economize tempo e tenha uma preparação testada em laboratório. Ideal para quem quer começar hoje com máxima eficácia.</p>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;gap:12px;flex-wrap:wrap">
-        <div>
+      <img src="https://imgur.com/bxIehHU.jpg" alt="Frasco Mounjax"/>
+      <div>
+        <strong style="font-size:20px;display:block;margin-bottom:8px">Oferta especial — Versão Pronta para Uso</strong>
+        <p class="small" style="color:#eee">Economize tempo e tenha uma preparação testada em laboratório. Ideal para quem quer começar hoje com máxima eficácia.</p>
+        <div style="margin-top:12px">
           <div class="price">R$ 23,90</div>
           <div class="small">(Envio digital + Guia de uso + Garantia de 7 dias)</div>
         </div>
-        <div style="display:flex;gap:10px">
+        <div style="margin-top:18px">
           <a class="btn btn-primary" id="buyNow">Quero a Versão Pronta</a>
         </div>
       </div>
     </section>
 
     <footer>
-      <div>Se não encontrar o e‑mail, verifique a pasta de SPAM ou entre em contato com <a href="mailto:suporte@mounjax.com">suporte@mounjax.com</a>.</div>
+      <div>Se não encontrar o e-mail, verifique a pasta de SPAM ou entre em contato com <a href="mailto:suporte@mounjax.com">suporte@mounjax.com</a>.</div>
     </footer>
   </main>
 
@@ -121,7 +120,7 @@
 
       <form id="checkoutForm">
         <label style="display:block;margin-top:10px">Nome completo<br><input name="name" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #ddd"/></label>
-        <label style="display:block;margin-top:10px">E‑mail<br><input name="email" type="email" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #ddd"/></label>
+        <label style="display:block;margin-top:10px">E-mail<br><input name="email" type="email" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #ddd"/></label>
 
         <div style="display:flex;gap:10px;margin-top:14px">
           <button class="btn btn-primary" type="submit">Pagar R$ 23,90</button>
@@ -144,7 +143,7 @@
       if(!name||!email){alert('Preencha os dados.');return}
       // Simula sucesso
       modal.style.display='none';
-      alert('Pagamento realizado! Aguarde o e‑mail com os detalhes de acesso. Obrigado, '+name+'!');
+      alert('Pagamento realizado! Aguarde o e-mail com os detalhes de acesso. Obrigado, '+name+'!');
     });
 
     // acessibilidade: fechar modal com ESC
