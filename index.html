@@ -28,10 +28,6 @@
     .upsell .price{font-size:26px;font-weight:700;color:#ffeb3b}
     .upsell img{max-width:180px;border-radius:12px}
 
-    /* Modal */
-    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;padding:20px}
-    .modal{background:#fff;border-radius:12px;max-width:720px;width:100%;padding:22px;box-shadow:0 18px 50px rgba(0,0,0,0.3)}
-
     /* Testemunhos */
     .testimonials{margin-top:40px}
     .testimonials h3{text-align:center;color:var(--purple);margin-bottom:20px}
@@ -53,13 +49,13 @@
     <div class="card">
       <div class="left">
         <h1>Muito obrigado pela compra e confiança!</h1>
-        <p class="lead">Sua receita do <span style="color:var(--accent)">Mounjax</span> chegará em até <strong>5 minutos</strong> no seu e-mail ou WhatsApp. Parabéns por dar o primeiro passo — essa fórmula é a base. Antes de ir, mostramos uma opção pronta e ainda mais eficaz para quem quer resultados imediatos.</p>
+        <p class="lead">Sua receita do <span style="color:var(--accent)">Mounjax</span> chegará em até <strong>5 minutos</strong> no seu e‑mail ou WhatsApp. Parabéns por dar o primeiro passo — essa fórmula é a base. Antes de ir, mostramos uma opção pronta e ainda mais eficaz para quem quer resultados imediatos.</p>
 
         <div class="benefits">
           <div class="benefit">✅ Receita completa e passo a passo</div>
           <div class="benefit">✅ Ingredientes naturais e explicados</div>
           <div class="benefit">✅ Sugestões de dosagem</div>
-          <div class="benefit">✅ Suporte por e-mail por 7 dias</div>
+          <div class="benefit">✅ Suporte por e‑mail por 7 dias</div>
         </div>
       </div>
     </div>
@@ -102,52 +98,14 @@
           <div class="small">(Envio digital + Guia de uso + Garantia de 7 dias)</div>
         </div>
         <div style="margin-top:18px">
-          <a class="btn btn-primary" id="buyNow">Quero a Versão Pronta</a>
+          <a class="btn btn-primary" id="buyNow" href="https://go.perfectpay.com.br/PPU38CQ0N9L" target="_blank">Quero a Versão Pronta</a>
         </div>
       </div>
     </section>
 
     <footer>
-      <div>Se não encontrar o e-mail, verifique a pasta de SPAM ou entre em contato com <a href="mailto:suporte@mounjax.com">suporte@mounjax.com</a>.</div>
+      <div>Se não encontrar o e‑mail, verifique a pasta de SPAM ou entre em contato com <a href="mailto:suporte@mounjax.com">suporte@mounjax.com</a>.</div>
     </footer>
   </main>
-
-  <!-- Modal de checkout (simulado) -->
-  <div class="modal-backdrop" id="modal">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <h2 id="modalTitle">Versão Pronta para Uso — Checkout</h2>
-      <p style="color:#555">Resumo do pedido: <strong>Versão Pronta Mounjax</strong> — R$ 23,90</p>
-
-      <form id="checkoutForm">
-        <label style="display:block;margin-top:10px">Nome completo<br><input name="name" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #ddd"/></label>
-        <label style="display:block;margin-top:10px">E-mail<br><input name="email" type="email" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #ddd"/></label>
-
-        <div style="display:flex;gap:10px;margin-top:14px">
-          <button class="btn btn-primary" type="submit">Pagar R$ 23,90</button>
-          <button class="btn btn-outline" type="button" id="cancel">Cancelar</button>
-        </div>
-        <p class="small">Pagamento simulado — essa página é um exemplo. Em um site real, integraríamos um gateway seguro (PagSeguro, Stripe, PayPal).</p>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById('modal');
-    document.getElementById('buyNow').addEventListener('click',()=>{modal.style.display='flex'});
-    document.getElementById('cancel').addEventListener('click',()=>{modal.style.display='none'});
-
-    document.getElementById('checkoutForm').addEventListener('submit',e=>{
-      e.preventDefault();
-      const name=e.target.name.value.trim();
-      const email=e.target.email.value.trim();
-      if(!name||!email){alert('Preencha os dados.');return}
-      // Simula sucesso
-      modal.style.display='none';
-      alert('Pagamento realizado! Aguarde o e-mail com os detalhes de acesso. Obrigado, '+name+'!');
-    });
-
-    // acessibilidade: fechar modal com ESC
-    window.addEventListener('keydown',e=>{if(e.key==='Escape'){modal.style.display='none'}})
-  </script>
 </body>
 </html>
