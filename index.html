@@ -30,6 +30,8 @@
     .testimonials h3{text-align:center;color:var(--purple);margin-bottom:20px}
     .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;align-items:stretch}
     .testimonial-grid img{width:100%;height:240px;object-fit:cover;object-position:center;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,0.1)}
+    /* tamanho normal para imagens específicas */
+    .testimonial-grid img.normal-size{height:auto;object-fit:contain}
 
     footer{margin-top:30px;text-align:center;color:#9a9a9a;font-size:13px}
 
@@ -39,6 +41,7 @@
       .upsell{flex-direction:column;text-align:center}
       .testimonial-grid{grid-template-columns:repeat(2,1fr)}
       .testimonial-grid img{height:180px}
+      .testimonial-grid img.normal-size{height:auto}
     }
 
     /* Confetti effect */
@@ -85,10 +88,10 @@
         <img src="https://imgur.com/2QrCL3k.jpg" alt="Depoimento 2"/>
         <img src="https://imgur.com/PtDRZxu.jpg" alt="Depoimento 3"/>
         <img src="https://imgur.com/ex64r7x.jpg" alt="Depoimento 4"/>
-        <img src="https://imgur.com/NshJFII.jpg" alt="Depoimento 5"/>
+        <img src="https://imgur.com/NshJFII.jpg" alt="Depoimento 5" class="normal-size"/>
         <img src="https://imgur.com/kuvyufU.jpg" alt="Depoimento 6"/>
         <img src="https://imgur.com/mTYarzT.jpg" alt="Depoimento 7"/>
-        <img src="https://imgur.com/YmdHadS.jpg" alt="Depoimento 8"/>
+        <img src="https://imgur.com/YmdHadS.jpg" alt="Depoimento 8" class="normal-size"/>
       </div>
     </section>
 
