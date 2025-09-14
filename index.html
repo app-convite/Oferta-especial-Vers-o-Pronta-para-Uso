@@ -28,8 +28,8 @@
     /* Testemunhos */
     .testimonials{margin-top:40px}
     .testimonials h3{text-align:center;color:var(--purple);margin-bottom:20px}
-    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;align-items:start}
-    .testimonial-grid img{width:100%;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,0.1);margin:0}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;align-items:stretch}
+    .testimonial-grid img{width:100%;height:240px;object-fit:cover;object-position:center;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,0.1)}
 
     footer{margin-top:30px;text-align:center;color:#9a9a9a;font-size:13px}
 
@@ -37,6 +37,8 @@
       .card{flex-direction:column}
       .benefits{grid-template-columns:1fr}
       .upsell{flex-direction:column;text-align:center}
+      .testimonial-grid{grid-template-columns:repeat(2,1fr)}
+      .testimonial-grid img{height:180px}
     }
 
     /* Confetti effect */
@@ -49,13 +51,13 @@
     <div class="card">
       <div class="left">
         <h1>MUITO OBRIGADO PELA <span class="green">COMPRA</span> E <span class="green">CONFIANÇA!</span></h1>
-        <p class="lead">Sua receita do <span style="color:var(--accent)">Mounjax</span> chegará em até <strong>5 minutos</strong> no seu e‑mail ou WhatsApp. Parabéns por dar o primeiro passo — essa fórmula é a base. Antes de ir, mostramos uma opção pronta e ainda mais eficaz para quem quer resultados imediatos.</p>
+        <p class="lead">Sua receita do <span style="color:var(--accent)">Mounjax</span> chegará em até <strong>5 minutos</strong> no seu e-mail ou WhatsApp. Parabéns por dar o primeiro passo — essa fórmula é a base. Antes de ir, mostramos uma opção pronta e ainda mais eficaz para quem quer resultados imediatos.</p>
 
         <div class="benefits">
           <div class="benefit">✅ Receita completa e passo a passo</div>
           <div class="benefit">✅ Ingredientes naturais e explicados</div>
           <div class="benefit">✅ Sugestões de dosagem</div>
-          <div class="benefit">✅ Suporte por e‑mail por 7 dias</div>
+          <div class="benefit">✅ Suporte por e-mail por 7 dias</div>
         </div>
       </div>
       <!-- Confetti elements -->
@@ -69,7 +71,7 @@
         <li>Manual de uso detalhado e cronograma</li>
         <li>Desconto exclusivo em reposições</li>
         <li>Suporte prioritário por 14 dias</li>
-        <li>Entrega imediata no e-mail/WhatsApp após a confirmação</li>
+        <li>Envio pelos correios (prazo de 2 dias)</li>
         <li>Composição validada em laboratório</li>
         <li>Resultados percebidos já nos primeiros dias</li>
         <li>Bônus exclusivo: dicas de otimização de resultados</li>
@@ -97,7 +99,7 @@
         <p class="small" style="color:#eee">Economize tempo e tenha uma preparação testada em laboratório. Ideal para quem quer começar hoje com máxima eficácia.</p>
         <div style="margin-top:12px">
           <div class="price">R$ 23,90</div>
-          <div class="small">(Envio digital + Guia de uso + Garantia de 7 dias)</div>
+          <div class="small">(Envio pelos correios prazo de 2 dias)</div>
         </div>
         <div style="margin-top:18px">
           <a class="btn btn-primary" id="buyNow" href="https://go.perfectpay.com.br/PPU38CQ0N9L" target="_blank">Quero a Versão Pronta</a>
@@ -106,7 +108,7 @@
     </section>
 
     <footer>
-      <div>Se não encontrar o e‑mail, verifique a pasta de SPAM ou entre em contato com <a href="mailto:suporte@mounjax.com">suporte@mounjax.com</a>.</div>
+      <div>Se não encontrar o e-mail, verifique a pasta de SPAM ou entre em contato com <a href="mailto:suporte@mounjax.com">suporte@mounjax.com</a>.</div>
     </footer>
   </main>
 
